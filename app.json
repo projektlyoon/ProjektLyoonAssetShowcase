@@ -7,8 +7,10 @@
     "icon": "./assets/images/icon.png",
     "scheme": "projektlyoonassetshowcase",
     "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.nikhil.yadav.ProjektLyoonAssetShowcase"
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +19,11 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.nikhil.yadav.ProjektLyoonAssetShowcase"
+    },
+    "androidStatusBar": {
+      "hidden": true
     },
     "web": {
       "output": "static",
@@ -34,7 +40,17 @@
             "imageWidth": 76
           }
         }
-      ]
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static",
+            "buildReactNativeFromSource": true
+          }
+        }
+      ],
+      "react-native-audio-api"
     ],
     "experiments": {
       "typedRoutes": true,
