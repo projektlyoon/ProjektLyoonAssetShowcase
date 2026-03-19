@@ -1,7 +1,8 @@
 import { Link } from 'expo-router';
-import { ChevronRight, Fuel, Square, Dices } from 'lucide-react-native';
+import { ChevronRight, Dices, Fuel, Square, SquareAsterisk } from 'lucide-react-native';
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function MainMenu() {
   const menuItems = [
@@ -30,6 +31,12 @@ export default function MainMenu() {
         {[...Array(9)].map((_, i) => <View key={i} style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#10b981' }} />)}
       </View>,
       href: '/die-matrix' as const,
+    },
+    {
+      title: 'Playing Card',
+      subtitle: 'Interactive game card with special effects',
+      icon: <SquareAsterisk size={24} color="#6366f1" />,
+      href: '/playing-card' as const,
     },
     // Add more components here as they are developed
   ];
