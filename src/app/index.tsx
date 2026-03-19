@@ -1,5 +1,5 @@
 import { Link } from 'expo-router';
-import { ChevronRight, Fuel, Square } from 'lucide-react-native';
+import { ChevronRight, Fuel, Square, Dices } from 'lucide-react-native';
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -16,6 +16,20 @@ export default function MainMenu() {
       subtitle: 'Superellipse / Squircle component',
       icon: <Square size={24} color="#ec4899" />,
       href: '/squircle' as const,
+    },
+    {
+      title: '3D Die',
+      subtitle: '3D animated Skia dice',
+      icon: <Dices size={24} color="#f59e0b" />,
+      href: '/die-3d' as const,
+    },
+    {
+      title: 'Matrix Die',
+      subtitle: 'Accessible dot-matrix dice',
+      icon: <View style={{ width: 24, height: 24, gap: 2, flexWrap: 'wrap', flexDirection: 'row' }}>
+        {[...Array(9)].map((_, i) => <View key={i} style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#10b981' }} />)}
+      </View>,
+      href: '/die-matrix' as const,
     },
     // Add more components here as they are developed
   ];
