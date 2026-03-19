@@ -1,5 +1,5 @@
 import { Link } from 'expo-router';
-import { ChevronRight, Fuel } from 'lucide-react-native';
+import { ChevronRight, Fuel, Square } from 'lucide-react-native';
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -10,6 +10,12 @@ export default function MainMenu() {
       subtitle: 'Animated sine wave fuel indicator',
       icon: <Fuel size={24} color="#3b82f6" />,
       href: '/fuel-bar' as const,
+    },
+    {
+      title: 'Squircle',
+      subtitle: 'Superellipse / Squircle component',
+      icon: <Square size={24} color="#ec4899" />,
+      href: '/squircle' as const,
     },
     // Add more components here as they are developed
   ];
