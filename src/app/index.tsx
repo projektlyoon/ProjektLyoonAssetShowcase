@@ -1,5 +1,5 @@
 import { Link } from 'expo-router';
-import { ChevronRight, Dices, Fuel, Square, SquareAsterisk } from 'lucide-react-native';
+import { ChevronRight, CirclePile, Dice5, Dices, Fuel, Square, SquareAsterisk } from 'lucide-react-native';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -27,9 +27,7 @@ export default function MainMenu() {
     {
       title: 'Matrix Die',
       subtitle: 'Accessible dot-matrix dice',
-      icon: <View style={{ width: 24, height: 24, gap: 2, flexWrap: 'wrap', flexDirection: 'row' }}>
-        {[...Array(9)].map((_, i) => <View key={i} style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#10b981' }} />)}
-      </View>,
+      icon: <Dice5 size={24} color="#10b981" />,
       href: '/die-matrix' as const,
     },
     {
@@ -38,7 +36,14 @@ export default function MainMenu() {
       icon: <SquareAsterisk size={24} color="#6366f1" />,
       href: '/playing-card' as const,
     },
+    {
+      title: 'Dot Matrix Text',
+      subtitle: 'Digital glyph-based text renderer',
+      icon: <CirclePile size={24} color="#8b5cf6" />,
+      href: '/dot-matrix' as const,
+    },
     // Add more components here as they are developed
+
   ];
 
   return (
